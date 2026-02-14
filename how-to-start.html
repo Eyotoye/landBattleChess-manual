@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Start a Game &mdash; Land Battle Chess Manual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleSidebar()">&#9776;</button>
+  <a href="index.html" class="logo">Land Battle Chess &mdash; Manual</a>
+</header>
+
+<!-- Sidebar overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<!-- Layout -->
+<div class="page-wrapper">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <div class="nav-section-label">Contents</div>
+      <a href="index.html">Welcome</a>
+      <a href="basic-rules.html">Basic Rules</a>
+      <a href="night-mode.html">Night Mode Rules</a>
+      <a href="how-to-start.html" class="active">How to Start a Game</a>
+    </nav>
+  </aside>
+
+  <!-- Content -->
+  <main class="content">
+    <h1>How to Start a Game</h1>
+    <p class="subtitle">Step-by-step guide for creating a room, connecting players, and starting a match.</p>
+
+    <p>After launching the game, you will see the following interface.</p>
+
+    <figure>
+      <img src="1.png" alt="Main menu interface after launching the game">
+    </figure>
+
+    <p>From <strong>Help</strong>, you can open the help page (in Chinese, but its content is entirely a subset of this tutorial website). <strong>Settings</strong> allows you to toggle sound on or off.</p>
+
+    <p>To start a game, you must first create a room. To do so, the server must have a public IP address, or both players must be in the same local network where they can access each other via IP addresses. Otherwise, only local single-device play using 127.0.0.1 is possible (requires launching two instances of the game).</p>
+
+    <p>Click <strong>Connect</strong> to proceed. The following screen will appear&mdash;choose the connection method according to the instructions.</p>
+
+    <p>The Chinese text in the interface below corresponds to the following English meanings:</p>
+    <ul>
+      <li>&#36873;&#25321; IP &mdash; Select IP</li>
+      <li>&#35831;&#36873;&#25321;&#20320;&#35201;&#29992;&#20110;&#21019;&#24314;&#26381;&#21153;&#22120;&#30340; IP&#65288;&#33509;&#26377;&#30097;&#38382;&#65292;&#35831;&#26597;&#38405; Help -> How to play&#65289; &mdash; Please select the IP to be used for creating the server (if unsure, refer to Help -> How to play)</li>
+      <li>&#26412;&#26426;&#23545;&#25112; &mdash; Local Match</li>
+    </ul>
+
+    <figure>
+      <img src="2.png" alt="IP selection dialog for creating a server">
+    </figure>
+
+    <p>After that, the client clicks <strong>Connect &rarr; Connect to server</strong> and enters the server's IP address to connect. Once the connection is successful, both sides will receive a notification and the board will be displayed.</p>
+
+    <p>Before starting the game, the server can choose from <strong>Settings</strong> whether to enable the second rule set and whether to enable Night Mode.</p>
+
+    <p>Once everything is ready, both sides click <strong>Play &rarr; Start</strong> to begin the game. A countdown and turn indicator will appear as shown below.</p>
+
+    <p>The Chinese text shown in the image below corresponds to the English meaning "Your turn". If it displays "&#36718;&#21040;&#23545;&#26041;&#34892;&#21160;", it means "Opponent's turn".</p>
+
+    <figure>
+      <img src="3.png" alt="Game board showing turn indicator and countdown timer">
+    </figure>
+
+    <p>Both sides then begin flipping pieces. After factions are determined, the interface will appear as follows. The bottom-right corner shows your faction color, while the top-left corner shows the opponent's faction color.</p>
+
+    <figure>
+      <img src="4.png" alt="Game board after factions are determined showing faction colors">
+    </figure>
+
+    <p>If the second rule set is enabled, the remaining piece types and counts for both sides will also be displayed (as shown below), helping players plan strategies for eliminating landmines. The right side shows information of your pieces, while the left side shows your opponent's.</p>
+
+    <figure>
+      <img src="5.png" alt="Game board with piece type and count display under second rule set">
+    </figure>
+
+    <p>After 20 moves have been played, you can surrender via <strong>Play &rarr; Admit Defeat</strong>. After the game ends, you can start the next round directly via <strong>Play &rarr; Restart</strong> without reconnecting.</p>
+
+    <p>If the server selects Night Mode from <strong>Settings</strong> before starting the game, the configuration interface shown below will appear.</p>
+
+    <p>The Chinese text in the interface below corresponds to the following English meanings:</p>
+    <ul>
+      <li>&#35831;&#35774;&#32622;&#29305;&#27530;&#26827;&#23376;&#30340;&#31181;&#31867;&#21644;&#25968;&#37327; &mdash; Please set the types and quantities of special pieces</li>
+      <li>&#37325;&#32622;&#20026;&#40664;&#35748; &mdash; Reset to default</li>
+      <li>6 special piece types from top to bottom: Scaredy, Fume, Ice, Doom, Plantern, Hypno</li>
+      <li>&#26827;&#23376;&#31867;&#22411; &mdash; Piece Type</li>
+      <li>&#25968;&#37327; &mdash; Quantity</li>
+      <li>&#30830;&#23450; &mdash; Confirm</li>
+    </ul>
+
+    <figure>
+      <img src="6.png" alt="Night Mode configuration interface for setting special piece types and quantities">
+    </figure>
+
+    <p>In Night Mode, in addition to a new background, a legend of the special pieces will be displayed at the bottom of the interface (due to adaptation constraints, text may appear compressed on some screen resolutions, as shown below).</p>
+
+    <p>Special pieces will have a colored band in the middle indicating their ability. For example, in the image below, the <strong>Division Commander</strong> has the <strong>Fume</strong> ability, the <strong>Commander-in-Chief</strong> has the <strong>Ice</strong> ability, the <strong>Landmine</strong> has the <strong>Plantern</strong> ability, and the <strong>Platoon Leader</strong> has the <strong>Hypno</strong> ability.</p>
+
+    <p>The labels "&#20320;&#26159;&#34013;&#26041;" and "&#23545;&#25163;&#32418;&#26041;" indicate "You are the Blue side" and "The opponent is the Red side," respectively. Conversely, if the interface displays "&#20320;&#26159;&#32418;&#26041;" and "&#23545;&#25163;&#34013;&#26041;," they mean "You are the Red side" and "The opponent is the Blue side."</p>
+
+    <figure>
+      <img src="7.png" alt="Night Mode game board showing special piece abilities and faction indicators">
+    </figure>
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  Land Battle Chess Game Manual
+</footer>
+
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebarOverlay').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

@@ -1,12 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Game Manual</title>
-  </head>
-  <body>
-    <h1>Game Manual</h1>
-    <p>This site is under construction.</p>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Land Battle Chess &mdash; Game Manual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleSidebar()">&#9776;</button>
+  <a href="index.html" class="logo">Land Battle Chess &mdash; Manual</a>
+</header>
+
+<!-- Sidebar overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<!-- Layout -->
+<div class="page-wrapper">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <div class="nav-section-label">Contents</div>
+      <a href="index.html" class="active">Welcome</a>
+      <a href="basic-rules.html">Basic Rules</a>
+      <a href="night-mode.html">Night Mode Rules</a>
+      <a href="how-to-start.html">How to Start a Game</a>
+    </nav>
+  </aside>
+
+  <!-- Content -->
+  <main class="content">
+    <div class="welcome-hero">
+      <h1>Land Battle Chess</h1>
+      <p class="tagline">A classic two-player strategy board game of hidden identities and tactical warfare.</p>
+    </div>
+
+    <div class="welcome-intro">
+      <p>Welcome to the official game manual for <strong>Land Battle Chess</strong>. Whether you are a first-time player or looking to sharpen your strategy, this guide covers everything you need to get started and play confidently.</p>
+      <p>Land Battle Chess is a strategic board game in which all pieces start face-down. Players take turns flipping, moving, and capturing pieces based on military rank. Victory is achieved by capturing the opponent's Flag or eliminating all their movable pieces. Simple rules, deep strategy.</p>
+    </div>
+
+    <div class="welcome-cards">
+      <a href="basic-rules.html" class="welcome-card">
+        <div class="card-title">Basic Rules</div>
+        <div class="card-desc">Learn the board layout, piece ranks, capture mechanics, flip rules, and strategy tips to play your first game.</div>
+      </a>
+      <a href="night-mode.html" class="welcome-card">
+        <div class="card-title">Night Mode Rules</div>
+        <div class="card-desc">Discover the experimental Night Mode &mdash; special abilities inspired by <em>Plants vs. Zombies</em> add a creative twist.</div>
+      </a>
+      <a href="how-to-start.html" class="welcome-card">
+        <div class="card-title">How to Start a Game</div>
+        <div class="card-desc">Step-by-step instructions for creating a room, connecting players, configuring settings, and starting a match.</div>
+      </a>
+    </div>
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  Land Battle Chess Game Manual
+</footer>
+
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebarOverlay').classList.toggle('active');
+}
+</script>
+
+</body>
 </html>

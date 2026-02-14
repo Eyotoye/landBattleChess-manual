@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic Rules &mdash; Land Battle Chess Manual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleSidebar()">&#9776;</button>
+  <a href="index.html" class="logo">Land Battle Chess &mdash; Manual</a>
+</header>
+
+<!-- Sidebar overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<!-- Layout -->
+<div class="page-wrapper">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <div class="nav-section-label">Contents</div>
+      <a href="index.html">Welcome</a>
+      <a href="basic-rules.html" class="active">Basic Rules</a>
+      <a href="night-mode.html">Night Mode Rules</a>
+      <a href="how-to-start.html">How to Start a Game</a>
+    </nav>
+  </aside>
+
+  <!-- Content -->
+  <main class="content">
+    <h1>Basic Rules Tutorial</h1>
+    <p class="subtitle">Step-by-step explanations for players encountering Land Battle Chess for the first time.</p>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+      <div class="toc-title">On this page</div>
+      <ol>
+        <li><a href="#game-objective">I. Game Objective</a></li>
+        <li><a href="#board-structure">II. Board Structure</a></li>
+        <li><a href="#piece-types">III. Piece Types and Rank Relationships</a></li>
+        <li><a href="#special-pieces">IV. Special Pieces</a></li>
+        <li><a href="#flip-action-rules">V. Flip Action Rules</a></li>
+        <li><a href="#rule-conventions">VI. Two Sets of Rule Conventions</a></li>
+        <li><a href="#other-rules">VII. Other Rules in This Game Version</a></li>
+        <li><a href="#strategy">VIII. Beginner Strategy Suggestions</a></li>
+      </ol>
+    </div>
+
+    <!-- I. Game Objective -->
+    <h2 id="game-objective">I. Game Objective</h2>
+    <p>Land Battle Chess is a two-player strategic board game. Victory is achieved when one of the following two conditions is met:</p>
+    <ul>
+      <li>Find and capture the opponent's <strong>Flag</strong></li>
+      <li>Make the opponent lose the ability to continue fighting through captures or positional blocking (no movable pieces remaining)</li>
+    </ul>
+
+    <!-- II. Board Structure -->
+    <h2 id="board-structure">II. Board Structure</h2>
+
+    <h3>1. Barracks</h3>
+    <ul>
+      <li>The most common square grids on the board, each can hold a single piece.</li>
+    </ul>
+
+    <h3>2. Camps</h3>
+    <ul>
+      <li>Circular grids on the board, 10 in total, each can hold a single piece.</li>
+      <li>Pieces in camps <strong>cannot</strong> be attacked, so camps can be used to protect key pieces or occupy strategic positions.</li>
+    </ul>
+
+    <h3>3. Railways</h3>
+    <ul>
+      <li>Paths marked with <strong>thick</strong> lines on the board.</li>
+      <li>Pieces can move <strong>multiple</strong> grids at once along the railway (unlimited steps, but must follow the track).
+        <ul>
+          <li>Most pieces: can only move in a <strong>straight</strong> line along the railway and cannot turn.</li>
+          <li>Engineers: can <strong>turn</strong> freely along railway lines and are the only pieces that can "change direction".</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>4. Roads</h3>
+    <ul>
+      <li>Paths marked with <strong>thin</strong> lines on the board.</li>
+      <li>Pieces can <strong>only</strong> move <strong>one</strong> grid at a time along roads.</li>
+    </ul>
+
+    <!-- III. Piece Types and Rank Relationships -->
+    <h2 id="piece-types">III. Piece Types and Rank Relationships</h2>
+    <p>The core mechanism of Land Battle Chess is that "military rank determines capture relationships".</p>
+    <p>From highest to lowest, the pieces are: <strong>Commander-in-Chief, Army Commander, Division Commander, Brigade Commander, Regimental Commander, Battalion Commander, Company Commander, Platoon Leader, Engineer</strong>.</p>
+    <p>Their corresponding Chinese names are: <strong>&#21496;&#20196;&#12289;&#20891;&#38271;&#12289;&#24072;&#38271;&#12289;&#26053;&#38271;&#12289;&#22242;&#38271;&#12289;&#33829;&#38271;&#12289;&#36830;&#38271;&#12289;&#25490;&#38271;&#12289;&#24037;&#20853;</strong>.</p>
+    <p>In addition, there are special pieces: <strong>Bomb</strong>, <strong>Landmine</strong>, and <strong>Flag</strong> (<strong>&#28856;&#24377;</strong>, <strong>&#22320;&#38647;</strong> and <strong>&#20891;&#26071;</strong>).</p>
+    <p>Capture rules are as follows:</p>
+    <ul>
+      <li>Higher-ranked pieces can capture lower-ranked pieces</li>
+      <li>Pieces of the same rank eliminate each other</li>
+      <li>Special pieces follow independent rules (see below)</li>
+    </ul>
+
+    <!-- IV. Special Pieces -->
+    <h2 id="special-pieces">IV. Special Pieces</h2>
+
+    <h3>1. Engineer</h3>
+    <ul>
+      <li>The only piece that can turn on railways</li>
+      <li>Can remove <strong>landmines</strong> without taking damage</li>
+      <li>Has the strongest mobility but requires protection</li>
+    </ul>
+
+    <h3>2. Bomb</h3>
+    <ul>
+      <li>When encountering any piece, both are eliminated (it can also be intentionally triggered by the opponent's piece)</li>
+      <li>Preferably used to eliminate high-ranked pieces and avoid being wasted on low-ranked ones</li>
+    </ul>
+
+    <h3>3. Landmine</h3>
+    <ul>
+      <li>Cannot move</li>
+      <li>As long as one side still has landmines on the board, its <strong>Flag</strong> cannot be attacked</li>
+      <li>Depending on the rules, there are different ways to eliminate them (described below)</li>
+    </ul>
+
+    <h3>4. Flag</h3>
+    <ul>
+      <li>Cannot move</li>
+      <li>Being captured results in immediate defeat</li>
+    </ul>
+
+    <!-- V. Flip Action Rules -->
+    <h2 id="flip-action-rules">V. Flip Action Rules</h2>
+    <p>This game adopts the "flip mode", described in detail below.</p>
+
+    <h3>1. Initial State</h3>
+    <ul>
+      <li>All pieces are face down</li>
+      <li>Both sides do not know the identities of the pieces</li>
+    </ul>
+
+    <h3>2. Action Rules</h3>
+    <ul>
+      <li>Flipping a piece itself counts as one action</li>
+      <li>Only after flipping can the piece's ownership and type be known</li>
+      <li>After determining factions, players may operate their own revealed pieces (move or capture), or flip another unknown piece</li>
+    </ul>
+
+    <h3>3. Faction Determination</h3>
+    <ul>
+      <li>At the start, only flipping pieces is allowed</li>
+      <li><strong>The player who first flips two pieces of the same color consecutively is assigned to that faction</strong> (this is the implementation in this version; another common rule is to agree on each side's color before the game begins)</li>
+      <li>Movement and attacks can only begin after factions are determined</li>
+    </ul>
+
+    <!-- VI. Two Sets of Rule Conventions -->
+    <h2 id="rule-conventions">VI. Two Sets of Rule Conventions</h2>
+
+    <h3>Default Rules</h3>
+    <p><strong>Mine Clearing:</strong> Only <strong>Engineers</strong> and <strong>Bombs</strong> can remove <strong>landmines</strong>.</p>
+    <p><strong>Capturing the Flag:</strong> After all of the opponent's <strong>landmines</strong> are cleared, any piece may capture the opponent's <strong>Flag</strong>.</p>
+
+    <h3>Optimized Rules</h3>
+    <p>It is not difficult to see that under the default rules above, if all <strong>Engineers</strong> and <strong>Bombs</strong> are eliminated while <strong>landmines</strong> remain uncleared, the game cannot progress and may easily result in a draw. Therefore, the following optimized rules are introduced to enhance competitiveness and intensity. The server can enable the "second rule set" before the game starts.</p>
+    <p><strong>Mine Clearing Without Engineers:</strong> If all <strong>Engineers</strong> on one side are eliminated, the piece with the <strong>current lowest rank</strong> may be used to eliminate a <strong>landmine</strong> together with itself.</p>
+    <p><strong>Restricted Flag Capture Method:</strong> The piece with the <strong>current lowest rank</strong> must be used to eliminate itself together with the <strong>Flag</strong> (capture the <strong>Flag</strong>).</p>
+
+    <!-- VII. Other Rules -->
+    <h2 id="other-rules">VII. Other Rules in This Game Version</h2>
+
+    <h3>Action Time Limit</h3>
+    <ul>
+      <li>Each action is limited to 20 seconds (60 seconds in Night Mode)</li>
+      <li>Timeout handling:
+        <ul>
+          <li>The current turn is considered forfeited</li>
+          <li>The opponent takes the turn</li>
+        </ul>
+      </li>
+      <li>Accumulating 3 timeouts results in a loss (Night Mode: 1 timeout leads directly to defeat)</li>
+    </ul>
+
+    <!-- VIII. Strategy -->
+    <h2 id="strategy">VIII. Beginner Strategy Suggestions</h2>
+    <ul>
+      <li>When your own pieces appear during the flipping phase, prioritize moving them into camps to protect them while securing positional advantages</li>
+      <li>Preserve <strong>Engineers</strong> as much as possible for efficient mine clearing when landmines appear in the midgame</li>
+      <li>Preserve <strong>Bombs</strong> as much as possible to deter and eliminate high-ranked pieces</li>
+      <li>If optimized rules are enabled, try to anticipate the positions of <strong>low-ranked</strong> pieces on both sides; for example, when <strong>Engineers</strong> are about to be eliminated, you may deploy a <strong>Platoon Leader</strong> in advance near the opponent's <strong>landmines</strong> for preparation, and also guard against similar intentions from the opponent</li>
+    </ul>
+    <p>By mastering the above content, you will be able to complete a full standard-mode Land Battle Chess match. Enjoy the game!</p>
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  Land Battle Chess Game Manual
+</footer>
+
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebarOverlay').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
