@@ -282,7 +282,7 @@ body {
   margin-bottom: 20px;
 }
 
-.welcome-card {
+.content a.welcome-card {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 24px 20px;
@@ -292,7 +292,7 @@ body {
   display: block;
 }
 
-.welcome-card:hover {
+.content a.welcome-card:hover {
   border-color: var(--primary-light);
   box-shadow: 0 2px 8px rgba(48, 105, 152, 0.12);
 }
